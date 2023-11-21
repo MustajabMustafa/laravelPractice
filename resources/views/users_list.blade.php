@@ -1,5 +1,5 @@
 @extends('layout.main')
-@section('title') {{ "Users" }} @endsection
+@section('title') {{ "Users List" }} @endsection
 @section('mainContent')
 <div class="row">
             <div class="col-md-12">

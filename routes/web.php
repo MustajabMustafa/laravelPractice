@@ -15,15 +15,18 @@ use App\Http\Controllers\UserController;
 
 Route::get('/', function () {
     //return "Hello";
-   return view('about_us');
+   return view('about');
 });
 
 Route::get('/aptech', function () {
     return view('about_us');
 });
 
-Route::get('/users', [UserController::class, 'zain']);
+Route::get('/stargate',[UserController::class,'index']);
+
+Route::get('/users', [UserController::class, 'users']);
 
 Route::get('/addNewUser',[UserController::class, 'addUser']);
+Route::post('/addNewUser',[UserController::class, 'store']);
 
 Route::get('/deleteUser/{id}',[UserController::class,'deleteUser']);
