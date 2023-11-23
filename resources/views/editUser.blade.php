@@ -3,7 +3,7 @@
 @section('mainContent')
 <div class="row">
     <div class="col-md-12">
-        <h1 class="display-1">Edit User</h1>
+        <h1 class="display-1 text-success">Edit User</h1>
     <form action="{{ url('updateUser') }}" method="POST">
     @csrf
     <input type="hidden" name="record_id" value="{{ $data->id }}">

@@ -3,7 +3,7 @@
 @section('mainContent')
 <div class="row">
     <div class="col-md-12">
-      <h1 class="display-1">Add User</h1>
+      <h1 class="display-1 text-success">Add User</h1>
     <form action="{{ url('addNewUser') }}" method="POST">
     @csrf
       <div class="mb-3">
