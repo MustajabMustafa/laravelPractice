@@ -31,6 +31,28 @@ class UserController extends Controller
 
     public function deleteUser($id){
         $data = DB::select('DELETE FROM students WHERE id='.$id);
+        // $data = DB::table('students')->where('id',$id)->delete();
+        return redirect('users');
+    }
+
+    public function editUser($id) {
+        //$result  = DB::select('SELECT * FROM students WHERE id='.$id);
+        $result  = DB::table('students')->find($id);
+        return view('editUser',['data'=>$result]);
+        dd($result);
+        
+    }
+
+    public function updateUser(Request $request){
+        $data = $request->input();
+        $updateData['name'] =  $data['name'];
+        $updateData['dob'] =  $data['dob'];
+        //$updateData['name'] =  $request->input('name');
+
+        $result = DB::table('students')
+            ->where('id',$data['record_id'])
+            ->update($updateData);
+
         return redirect('users');
     }
 }

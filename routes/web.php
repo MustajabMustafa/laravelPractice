@@ -30,3 +30,6 @@ Route::get('/addNewUser',[UserController::class, 'addUser']);
 Route::post('/addNewUser',[UserController::class, 'store']);
 
 Route::get('/deleteUser/{id}',[UserController::class,'deleteUser']);
+
+Route::get('/editUser/{id}',[UserController::class,'editUser']);
+Route::post('/updateUser',[UserController::class, 'updateUser']);

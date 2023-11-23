@@ -23,7 +23,7 @@
                                         <td>{{ $student->name }}</td>
                                         <td>{{ $student->dob }}</td>
                                         <td>{{ $student->created_at }}</td>
-                                        <td><a href="" class="btn btn-sm btn-warning">Edit</a> | <a href="{{ url('deleteUser') }}/{{ $student->id }}" class="btn btn-sm btn-danger">Delete</a></td>
+                                        <td><a href="{{ url('editUser') }}/{{ $student->id }}" class="btn btn-sm btn-warning">Edit</a> | <a href="{{ url('deleteUser') }}/{{ $student->id }}" class="btn btn-sm btn-danger">Delete</a></td>
                                     </tr>
                                 @endforeach
                             </tbody>
